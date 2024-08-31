@@ -69,3 +69,13 @@
 #     stripped_word = word.strip();
 #     if len(stripped_word) % 2 == 1:
 #         print(stripped_word);
+
+user_input = input('Enter list of words separated by commas: ')
+word_list = user_input.split(',')
+
+# List comprehension to get odd-length words after stripping spaces
+odd_length_words = [word.strip() for word in word_list if len(word) % 2 == 1]
+
+# Print each word that meets the condition
+for word in odd_length_words:
+    print(word)
